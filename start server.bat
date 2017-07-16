@@ -1,0 +1,1 @@
+cmd /k npm run-script start-server ./server

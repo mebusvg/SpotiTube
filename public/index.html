@@ -1,0 +1,60 @@
+<!doctype html>
+<html data-ng-app="SpotiTube">
+	<head>
+		<title>SpotiTube</title>
+
+		<base href="/">
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="MVG">
+		<meta name="fragment" content="!">
+
+		<script type="text/javascript">typeof module === 'object' && (window.module = module, module = undefined);</script>
+
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular-resource.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular-sanitize.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/5.19.1/video.min.js"></script>
+
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.6.1/mousetrap.min.js"></script>
+
+			<script src="javascript/ultrawide.js"></script>
+
+			<script src="javascript/app/app.module.js"></script>
+			<script src="javascript/app/app.config.js"></script>
+			<script src="javascript/app/app.routes.js"></script>
+			<script src="javascript/app/app.factories.js"></script>
+			<script src="javascript/app/app.directive.js"></script>
+			<script src="javascript/app/app.controllers.js"></script>
+			<script src="javascript/app/app.filters.js"></script>
+
+		<script type="text/javascript">window.module && (module = window.module);</script>
+
+		<link rel="stylesheet" href="https://bootswatch.com/cyborg/bootstrap.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/titatoggle/1.2.14/titatoggle-dist-min.css" integrity="sha256-WcIx9q1KpJ2hzdIQ6PunJs52ZBPXieujyiJ9hQ/5qwg=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.0.1/alt/video-js-cdn.min.css" />
+
+		<link rel="stylesheet" href="css/custom.css" />
+
+	</head>
+	<body>
+		<div data-ui-view="menu"></div>
+		<div class="container-fluid">
+				<div data-ui-view="side-menu" class="col-lg-2">
+				</div>
+				<div data-ui-view="container" class="col-lg-10">
+				</div>
+		</div>
+		<br /><br />
+		<div data-ui-view="footer"></div>
+	</body>
+</html>

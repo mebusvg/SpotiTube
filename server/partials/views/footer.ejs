@@ -1,0 +1,23 @@
+<footer class="navbar navbar-default navbar-fixed-bottom">
+	<div class="row">
+		<div class="col-md-4 text-center">
+			<img ng-src="{{songInfo.image}}" class="pull-left" width="64" height="64" />
+			<h6>{{songInfo.title}}</h6>
+			<p><a ng-repeat="artist in songInfo.artist" data-ui-sref="root.viewartist({id:artist.id})"><i>{{artist.name}}<small ng-show="!$last">,&nbsp;</small></i></a></p>
+		</div>
+		<div class="col-md-4 text-center">
+			<i class="fa fa-step-backward fa-4x" aria-hidden="true" ng-click="prevSong()"></i>
+			<i ng-model="collapsed" ng-click="togglePlayButton(); collapsed=!collapsed" ng-class="{'fa fa-play-circle-o fa-4x':collapsed,'fa fa-pause-circle-o fa-4x':!collapsed}" aria-hidden="true"></i>
+			<i class="fa fa-step-forward fa-4x" aria-hidden="true" ng-click="nextSong()"></i>
+			<i class="fa fa-window-maximize fa-4x" aria-hidden="true" ng-click="toggleVideo()"></i>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12" style="padding-top: 30px;">
+			<video id="mainplayer" class="video-js vjs-default-skin vjs-nofull" width="0" height="0" controls>
+			</video>
+		</div>
+		<video id="videoplayer" class="video-js vjs-default-skin" width="0" height="0" controls style="display:none">
+		</video>
+	</div>
+</footer>

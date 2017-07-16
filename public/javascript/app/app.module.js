@@ -1,0 +1,1 @@
+var app = angular.module('SpotiTube', ['ui.router', 'ngResource', 'ngSanitize', 'ngStorage', 'ui.bootstrap']);

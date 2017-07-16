@@ -1,0 +1,25 @@
+body
+{
+	padding-top: 40px;
+	padding-bottom: 50px;
+}
+
+.video-js
+{
+	width: 100% !important;
+}
+
+img
+{
+	display: none;
+}
+
+img[src]
+{
+	display: block;
+}
+
+.vjs-nofull .vjs-fullscreen-control
+{
+	display: none;
+}

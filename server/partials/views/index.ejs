@@ -1,0 +1,8 @@
+<div class="row">
+	<div ng-repeat="playlist in toplists.playlists.items">
+		<div class="clearfix" ng-if="$index % 3 == 0"></div>
+		<div class="col-sm-4">
+			<a data-ui-sref="root.viewplaylist({user:playlist.owner.id, playlist:playlist.id})"><img ng-src="{{playlist.images[0].url}}" /></a>
+		</div>
+	<div>
+</div>
