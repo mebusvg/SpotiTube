@@ -8,10 +8,10 @@ server/api/controllers/youtube.js
 
 npm install
 
-To start Electron/server use:
+To start Electron/server:
 
 npm start
 
-If you only want the server to run and use SpotiTube in your browser use:
+If you only want the server to run and use SpotiTube in your browser:
 
 npm run-script start-server ./server
