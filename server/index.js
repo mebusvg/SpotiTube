@@ -16,12 +16,12 @@
 
 	app.use(express.static(path.join(__dirname, '../public')));
 
-	app.use('/api', API.app);
-
 	app.get('*', function(req, res, next)
 	{
 		req.xhr == true ? (next()) : (res.sendFile(path.join(__dirname, '../public/index.html')));
 	});
+
+	app.use('/api', API.app);
 
 	app.use('/partials', PARTIALS.app);
 

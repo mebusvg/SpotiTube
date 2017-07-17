@@ -87,7 +87,7 @@ app.controller('IndexCtrl', function($scope, SpotifyApi, YoutubeApi, PlaylistSer
 		player.fullscreen();
 	});
 	Mousetrap.bind(['space'], () => {
-		player.getPlayer().isFullscreen() && (player.togglePlay());
+		player.videoplayer.isFullscreen() && (player.togglePlay());
 	});
 
 	$scope.prevSong = function()
