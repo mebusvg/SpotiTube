@@ -2,8 +2,8 @@ const SpotifyWebApi = require('spotify-web-api-node');
 
 var spotifyApi = new SpotifyWebApi(
 {
-	clientId : '',
-	clientSecret : ''
+	clientId : 'f0722d948a8346d19afd99f625e78a52',
+	clientSecret : '90560ff2e6e843ac9e7b721006ec6e5f'
 });
 
 !function refreshToken()
