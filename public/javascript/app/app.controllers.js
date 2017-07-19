@@ -58,6 +58,8 @@ app.controller('IndexCtrl', function($scope, SpotifyApi, YoutubeApi, PlaylistSer
 {
 	var player = new PlayerServiceV2();
 
+	$scope.selected = '';
+
 	player.mainplayer.on('ended', function()
 	{
 		player.next();
@@ -76,11 +78,26 @@ app.controller('IndexCtrl', function($scope, SpotifyApi, YoutubeApi, PlaylistSer
 		$scope.songInfo = PlaylistServiceV2.getSongInfo();
 	});
 	$scope.$watch(function()
-		{
+	{
+		return $scope.selected
+	}, function(newVal, oldVal)
+	{
+		console.log(newVal)
+	});
+	$scope.$watch(function()
+	{
 		return YoutubeService.info;
 	}, function(newVal, oldVal)
 	{
 		YoutubeService.search && ($scope.songInfo = {image: YoutubeService.info.thumbnails.default.url, artist: [], title: YoutubeService.info.title});
+	});
+	$scope.$watch(function()
+	{
+		return PlaylistServiceV2.VQL;
+	}, function(newVal, oldVal)
+	{
+		console.log(newVal);
+		$scope.VQL = newVal;
 	});
 
 	Mousetrap.bind(['f'], () => {

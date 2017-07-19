@@ -58,6 +58,7 @@ app.factory('PlaylistServiceV2', function()
 	return {
 		playlists: {},
 		currentPlaylistId: '',
+		VQL: '',
 		songInfo: {},
 		prev: function()
 		{
@@ -111,8 +112,6 @@ app.factory('PlayerServiceV2', function(YoutubeApi, $filter, PlaylistServiceV2, 
 
 		this.VIDEO = [];
 		this.AUDIO = [];
-
-		this.paused = true;
 
 		search != undefined && (this.search = search);
 
@@ -226,6 +225,7 @@ app.factory('PlayerServiceV2', function(YoutubeApi, $filter, PlaylistServiceV2, 
 		}));
 		self.AUDIO.length != 0 ? (self.mainplayer.src(self.AUDIO.slice(-1).pop()[0].url)) : (this.NON_DASH = true, console.log('NON_DASH'), self.mainplayer.src(self.VIDEO.slice(-1).pop()[0].url));
 		self.AUDIO.length != 0 && (self.videoplayer.isFullscreen() && (self.videoplayer.src(self.VIDEO.slice(-1).pop()[0].url), self.videoplayer.play()));
+		PlaylistServiceV2.VQL = self.VIDEO;
 	}
 	return PlayerServiceV2;
 });
