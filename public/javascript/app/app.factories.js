@@ -115,7 +115,7 @@ app.factory('PlayerServiceV2', function(YoutubeApi, $filter, PlaylistServiceV2, 
 
 		search != undefined && (this.search = search);
 
-		this.mainplayer = videojs('mainplayer').ready(function()
+		this.mainplayer = videojs('mainplayer', { nativeControlsForTouch:false }).ready(function()
 		{
 			var videoplayer = videojs('videoplayer');
 			var SEEKING = false;
