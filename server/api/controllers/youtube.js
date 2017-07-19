@@ -3,7 +3,7 @@ const ytdl 			= require('ytdl-core');
 
 const opts = {
 	maxResults: 20,
-	key: 'AIzaSyCDyS5Lb69X_RFTr9ziD7MNRDGvR8EH8Hc'
+	key: ''
 };
 
 module.exports =
